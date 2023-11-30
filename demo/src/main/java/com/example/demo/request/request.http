@@ -1,0 +1,49 @@
+### GET all car brands
+GET http://localhost:8080/carBrand
+
+### GET car brand by name
+GET http://localhost:8080/carBrand/Toyota
+
+### Get list of all models
+GET http://localhost:8080/carModels
+
+### Get model by name
+GET http://localhost:8080/carModel/Corolla
+
+### Create new brand
+POST http://localhost:8080/carBrand
+
+Request Body:
+{
+    "brandName":"XYZ",
+    "employeeNum":1000,
+    "models":[]
+}
+
+### Create new model
+POST http://localhost:8080/carModel
+
+Request Body:
+{
+    "modelName":"ABC",
+    "doors":5,
+    "vMax":250,
+    "carBrand":"Toyota"
+}
+
+### Update a car model
+PUT http://localhost:8080/carModel/110cebab-78b9-4e7e-b73e-52b385484356
+
+Request Body:
+{
+    "modelName":"Corolla",
+    "doors":4,
+    "vMax":100,
+    "carBrand":"Toyota"
+}
+
+### Delete CarModel by name
+http://localhost:8080/carModel/Corolla
+
+### Delete CarBrand by id
+DELETE http://localhost:8080/carBrand/2d1238e9-cf0e-4142-8089-52f369595cbc

@@ -13,6 +13,8 @@ public interface CarModelRepository extends JpaRepository<CarModel, UUID> {
     @Override
     List<CarModel> findAll();
     CarModel getCarModelByModelName(String modelName);
+    Optional<CarModel>findByModelName(String name);
+
     @Query("SELECT c FROM CarModel c WHERE c.modelName = :modelName and c.vMax = :vMax")
     Optional<CarModel> findCarModelByModelNameAndVMax(
             @Param("modelName") String modelName,
