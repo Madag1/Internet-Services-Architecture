@@ -1,0 +1,20 @@
+server:
+  port: 8083
+
+isa:
+  gateway:
+    host: http://localhost:8083
+
+  carBrand:
+    url: http://localhost:8080
+  carModel:
+    url: http://localhost:8081
+
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true

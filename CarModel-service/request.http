@@ -1,0 +1,12 @@
+### GET carBrand by name
+GET http://localhost:8083/carBrands/e340ba5d-de57-47db-a56f-5bd788f4d183
+
+### Get list of all carBrands
+GET http://localhost:8083/carBrands
+
+### Get carModels list
+GET http://localhost:8083/carModels
+
+### Delete carModel  by  id
+DELETE http://localhost:8083/carModels/9d1d3e0a-bb79-4de4-a836-87ca02216846
+

@@ -1,0 +1,45 @@
+### GET carBrands by name
+GET http://localhost:8083/carBrands/e340ba5d-de57-47db-a56f-5bd788f4d183
+
+### Get list of all carBrands
+GET http://localhost:8083/carBrands
+
+### Get carModels list
+GET http://localhost:8083/carModels
+
+### Get  single carModels by name
+GET http://localhost:8083/carModels/1c2b8bdb-f83f-4594-a18b-4073ec5b5afb
+
+### Create new carModels
+POST http://localhost:8083/carModels
+Content-Type: application/json
+
+{
+    "name": "Transit",
+    "doors": 4,
+    "carBrand_id": "e340ba5d-de57-47db-a56f-5bd788f4d183"
+}
+### Update  carBrand
+PUT http://localhost:8083/carBrands/3851dc62-52b7-481a-adcd-0287c16298b5
+Content-Type: application/json
+
+{
+    "name": "Honda",
+    "employees": 10000
+}
+
+### Update a carModel
+PUT http://localhost:8083/carModels/df36bcaf-e3cb-4d84-8ae7-53826b05bceb
+Content-Type: application/json
+
+{
+    "name": "UpdatedName",
+    "doors": 4,
+    "carBrandsName": "UpdatedCarBrand"
+}
+
+### Delete carModels  by  id
+DELETE http://localhost:8083/carModels/df36bcaf-e3cb-4d84-8ae7-53826b05bceb
+
+### DELETE carBrand by id
+DELETE http://localhost:8083/carBrands/3851dc62-52b7-481a-adcd-0287c16298b5
